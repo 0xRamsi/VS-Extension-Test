@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+
+  <Commands package="guidVS_Extension_TestPackage">
+    <Groups>
+      <Group guid="guidVS_Extension_TestPackageCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_EDIT" />
+      </Group>
+    </Groups>
+
+    <Buttons>
+      <Button guid="guidVS_Extension_TestPackageCmdSet" id="cmdidToolWindow1Command" priority="0x0100" type="Button">
+        <Parent guid="guidSHLMainMenu" id="IDG_VS_WNDO_OTRWNDWS1" />
+        <Icon guid="MyIcons" id="redCircle" />
+        <Strings>
+          <ButtonText>Ramzis toolwindow</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+  </Commands>
+
+  <Symbols>
+    <GuidSymbol name="guidVS_Extension_TestPackage" value="{2816711c-a17c-4b36-96e8-68f89937eca0}" />
+
+    <GuidSymbol name="guidVS_Extension_TestPackageCmdSet" value="{d32ed7ee-0a59-4371-93f8-dd9e987c5fcd}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="Lala" value="0x1022" />
+      <IDSymbol value="4129" name="cmdidCommand1" />
+      <IDSymbol value="4131" name="cmdidToolWindow1Command" />
+    </GuidSymbol>
+
+	  <GuidSymbol name="MyIcons" value="{cb09b8db-22c0-4cb2-9fc2-af247647c22d}">
+		  <IDSymbol name="redCircle" value="1"/>
+	  </GuidSymbol>
+  </Symbols>
+</CommandTable>
